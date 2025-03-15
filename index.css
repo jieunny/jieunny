@@ -19,17 +19,52 @@
 .con{
     
     width: 100vw;
-    height: 53vw;
+    height: 100vh;
     display: flex;
   justify-content : center;
   position:relative;
   z-index: 1; 
+  overflow:hidden;
 }
 .logo{
-    width: 70.3vw;
+    width: 70vw;
     display: flex;
-    margin-top: 7.2vw;
+    margin-top: 7vw;
   justify-content : center;
   position: absolute;
   z-index: 3; 
+}
+
+@media (max-width: 767px) {
+    .con{
+        
+        /* height: 50vh; */
+        
+    }
+    .logo{
+        width: 80vw;
+        margin-top: 30vh;
+        
+    }
+    .back{
+        width: 180vw;
+        height: 90vh;
+    }
+}
+
+@media (min-width:768px) and (max-width:1024px) {
+    .con{
+        
+        /* height: 50vh; */
+        
+    }
+    .logo{
+        width: 90vw;
+        margin-top: 32vh;
+        
+    }
+    .back{
+        width: 170vw;
+        height: 90vh;
+    }
 }
