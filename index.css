@@ -36,11 +36,7 @@
 }
 
 @media (max-width: 767px) {
-    .con{
-        
-        /* height: 50vh; */
-        
-    }
+    
     .logo{
         width: 80vw;
         margin-top: 60vh;
@@ -52,12 +48,8 @@
     }
 }
 
-@media (min-width:768px) and (max-width:1024px) {
-    .con{
-        
-        /* height: 50vh; */
-        
-    }
+@media all and (min-width:768px) and (max-width:1024px) {
+    
     .logo{
         width: 90vw;
         margin-top: 32vh;
