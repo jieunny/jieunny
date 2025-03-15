@@ -45,6 +45,10 @@
     .back{
         width: 180vw;
         height: 90vh;
+         display: flex;
+    
+  justify-content : center;
+  position: absolute;
     }
 }
 
