@@ -1,0 +1,35 @@
+*{
+    list-style: none;
+    border-collapse: collapse;
+    text-decoration: none;
+     margin: 0vw;
+    padding: 0vw;
+    
+}
+
+.back{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    
+  justify-content : center;
+  position: absolute;
+}
+
+.con{
+    
+    width: 100vw;
+    height: 53vw;
+    display: flex;
+  justify-content : center;
+  position:relative;
+  z-index: 1; 
+}
+.logo{
+    width: 70.3vw;
+    display: flex;
+    margin-top: 7.2vw;
+  justify-content : center;
+  position: absolute;
+  z-index: 3; 
+}
