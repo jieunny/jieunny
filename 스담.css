@@ -1,0 +1,35 @@
+*{
+    list-style: none;
+    border-collapse: collapse;
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+  
+}
+
+/* .page{
+    width: 100vw;
+background-color: blueviolet;
+align-items: center;
+
+} */
+/* .pic{
+    width: 90%;
+    display: flex;
+    position: absolute;
+}*/
+.page{
+    background: #a3ff0e;
+    width: 100vw;
+    display: flex;
+  justify-content : center;
+  position:relative;
+} 
+/* .pic{
+    width: 70vw;
+    display: flex;
+    margin-top: 7.2vw;
+  justify-content : center;
+  position: absolute;
+  z-index: 3; 
+} */
