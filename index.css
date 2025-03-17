@@ -6,33 +6,116 @@
     padding: 0vw;
     
 }
+@font-face {
+    font-family: 'galmuri';
+    src: url("Galmuri14.ttf");
+    src: url('https://cdn.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css');
+    
+}
+@import url('https://cdn.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css');
 
-.back{
+/* .back{
     width: 100vw;
     height: 100vh;
     display: flex;
     
   justify-content : center;
   position: absolute;
-}
+} */
 
 .con{
-    
     width: 100vw;
     height: 100vh;
     display: flex;
-  justify-content : center;
+  /* justify-content : center; */
   position:relative;
   z-index: 1; 
   overflow:hidden;
+  background-color: #f7f7f7;
 }
-.logo{
+.feed{
+position: absolute;    
+    width: 26.93vw;
+    margin-left:63.5vw;
+    margin-top: 28.28vw; 
+}
+.feed:hover{
+  transform: scale(102%);
+  cursor: pointer;
+  }
+.mail{
+  position: absolute;    
+      width: 14.11vw;
+      margin-left: 79.5vw;
+      margin-top: 7.92vw; 
+  }
+  
+  .mail:hover{
+    transform: scale(102%);
+    cursor: pointer;
+    }
+
+.info{
+    position: absolute;    
+        width: 16.56vw;
+        margin-left: 6vw;
+        margin-top: 24.06vw; 
+}
+
+.info:hover{
+  transform: scale(102%);
+  cursor: pointer;
+  }
+
+/* .logo{
     width: 70vw;
     display: flex;
     margin-top: 7vw;
   justify-content : center;
   position: absolute;
   z-index: 3; 
+} */
+.flow-container{
+    width: 100vw;
+    height: 2.2vw;
+    display: flex;
+    position:absolute;
+    background-color: #0E0D19;
+}
+.flow-text {
+  font-family: 'galmuri';
+    display: flex;
+    flex: 0 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: 0s;
+    font-size: 0.89vw;
+    font-weight:bold;
+    color: #F7F7F5;
+    margin-top: 0.47vw;
+}
+/* .flow-text:hover {
+  color: #000;
+} */
+.flow-text:hover .flow-wrap {
+  animation-play-state: paused;
+  cursor: pointer;
+}
+.flow-wrap {
+  animation: textLoop 15s linear infinite;
+  padding-right: 1.4881vw;
+  font-family: 'galmuri';
+}
+
+@keyframes textLoop {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
 }
 
 @media (max-width: 767px) {
@@ -43,8 +126,8 @@
         
     }
     .back{
-        width: 180vw;
-        height: 90vh;
+        width: 175vw;
+        height: 75vh;
     }
 }
 

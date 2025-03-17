@@ -1,0 +1,106 @@
+*{
+    list-style: none;
+    border-collapse: collapse;
+    text-decoration: none;
+     margin: 0vw;
+    padding: 0vw;
+    
+}
+@font-face {
+    font-family: 'galmuri';
+    src: url("Galmuri14.ttf");
+}
+
+/* .back{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    
+  justify-content : center;
+  position: absolute;
+} */
+
+.con{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+  justify-content : center;
+  position:relative;
+  z-index: 1; 
+  overflow:hidden;
+}
+/* .logo{
+    width: 70vw;
+    display: flex;
+    margin-top: 7vw;
+  justify-content : center;
+  position: absolute;
+  z-index: 3; 
+} */
+
+.container{
+    width: 100vw;
+    height: 2.5vw;
+    display: flex;
+    position:absolute;
+    background-color: #0E0D19;
+    font-family: galmuri;
+}
+
+@keyframes scroll-animation{
+    0%{
+      left: 0;
+    }
+    100%{
+      left: -350px; /* 텍스트 width와 동일 */
+    }
+  }
+  .scroll-text{
+    width: 100vw;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .track{
+    position: relative;
+    width: 100vw;
+    animation: scroll-animation 8s linear infinite;
+  }
+  .track p{
+    float: left;
+    width: 350px;
+    font-size: 1vw;
+    justify-content : center;
+    color: #F7F7F5;
+    margin-top: 0.6vw;
+    white-space: nowrap;
+    
+  }
+  #mate{
+    font-family: 'galmuri';
+  }
+
+@media (max-width: 767px) {
+    
+    .logo{
+        width: 90vw;
+        margin-top: 30vh;
+        
+    }
+    .back{
+        width: 175vw;
+        height: 75vh;
+    }
+}
+
+@media (min-width:768px) and (max-width:1024px) {
+    
+    .logo{
+        width: 90vw;
+        margin-top: 32vh;
+        
+    }
+    .back{
+        width: 170vw;
+        height: 90vh;
+    }
+}

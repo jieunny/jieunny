@@ -1,0 +1,28 @@
+@keyframes scroll-animation{
+    0%{
+      left: 0;
+    }
+    100%{
+      left: -400px; /* 텍스트 width와 동일 */
+    }
+  }
+  .scroll-text{
+    width: 100%;
+    overflow: hidden;
+  }
+  .track{
+    position: relative;
+    width: 2800px;
+    animation: scroll-animation 5s linear infinite;
+    
+  }
+  .track p{
+    float: left;
+    width: 400px;
+    font-size: 36px;
+    
+  }
+  @font-face {
+    font-family: 'lato';
+    src: url("Lato-BlackItalic.ttf");
+}
