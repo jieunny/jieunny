@@ -21,6 +21,15 @@ display: flex;
 justify-content : center;
 flex-direction: column;
 }
+
+@media (max-width: 767px) {
+
+  img {
+   
+    width: 100%;
+   
+}
+}
 /* .pic{
     width: 90%;
     display: flex;
