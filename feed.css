@@ -7,7 +7,8 @@
     
     
 }
-body, html {cursor: url(pinkcursor.cur), auto}
+body, html {cursor: url(pinkcursor.cur), auto;
+    overflow:hidden;}
 
 .con{
     
@@ -28,7 +29,7 @@ body, html {cursor: url(pinkcursor.cur), auto}
     display: flex;
   justify-content : center;
   align-items: center;
-  
+
   z-index: 1; 
   overflow:hidden;
   background-color: #6887F4;
