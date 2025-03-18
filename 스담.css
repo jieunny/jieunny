@@ -6,6 +6,7 @@
     padding: 0px;
   
 }
+body, html {cursor: url(pinkcursor.cur), auto}
 img {
     margin: auto;
     display: block;

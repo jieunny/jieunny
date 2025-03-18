@@ -5,7 +5,10 @@
      margin: 0vw;
     padding: 0vw;
     
+    
 }
+body, html {cursor: url(pinkcursor.cur), auto}
+
 .con{
     
     width: 100vw;
@@ -13,9 +16,23 @@
     display: flex;
   /* justify-content : center; */
   align-items: center;
-  position:relative;
+  position:absolute;
+  z-index: 2; 
+  overflow:hidden;
+  
+}
+.con2{
+    
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+  justify-content : center;
+  align-items: center;
+  
   z-index: 1; 
   overflow:hidden;
+  background-color: #6887F4;
+  
 }
 
 
@@ -37,11 +54,11 @@
     
     .back{
         width: 100vw;
-        height: 100vh;
+        height: 110vh;
         display: flex;
         
       justify-content : center;
-      position: relative;
+      position: absolute;
     }
     
 
@@ -52,6 +69,9 @@
         display: flex;
         margin-left: 68.54vw;
         /* margin-top: 55vh; */
+    }
+    .logo:hover{
+        cursor: url(greenstar.cur), auto;
     }
 
     .window{
@@ -68,7 +88,7 @@ overflow: hidden;
     overflow: scroll;
     width: 58.2vw;
     height: 38.6vw;
-    background: rgb(249, 249, 247);
+    
     z-index: 3; 
     display: flex;
     position: absolute;
@@ -93,10 +113,13 @@ overflow: hidden;
 align-items: center;
 margin-left: 2vw;
 margin-right: 2vw;
-display:inline
+display:inline;
+vertical-align: middle;
+
 }
 .child:hover {
-    cursor: pointer;
+    cursor: url(greenstar.cur), auto;
+    /* cursor: pointer; */
     color: rgba(103, 115, 255, 0.6);
 transform: scale(105%);
 }
@@ -112,7 +135,7 @@ transform: scale(105%);
     /* background-color: rgb(255, 175, 175); */
     margin-top: 2vw;
     margin-bottom: 2vw;
-    
+    vertical-align: middle;
   }
   
 
@@ -133,3 +156,27 @@ img {
     display: flex;
    
 }
+
+@media (max-width: 767px) {
+
+  
+  .back{
+      width: 255vw;
+      height: 100vh;
+      display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  }
+  
+  @media (min-width:768px) and (max-width:1024px) {
+   
+      .back{
+          width: 210vw;
+          height: 100vh;
+          justify-content : center;
+      }
+   
+  }
+  

@@ -6,6 +6,11 @@
     padding: 0vw;
     
 }
+
+body, html {cursor: url(pinkcursor.cur), auto
+}
+
+
 @font-face {
     font-family: 'galmuri';
     src: url("Galmuri14.ttf");
@@ -16,7 +21,7 @@
 
 .back{
     width: 100vw;
-    height: 100vh;
+    height: 110vh;
     display: flex;
     
   justify-content : center;
@@ -28,26 +33,43 @@
     height: 100vh;
     display: flex;
   /* justify-content : center; */
-  position:relative;
-  z-index: 1; 
+  position:absolute;
+  z-index: 2; 
   overflow:hidden;
-  background-color: #6887F4;
+  
 }
+.con2{
+    
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+justify-content : center;
+align-items: center;
+
+z-index: 1; 
+overflow:hidden;
+background-color: #6887F4;
+
+}
+
 .feed{
 position: absolute;    
     width: 28vw;
     margin-left:61vw;
     margin-top: 28.28vw; 
+    z-index: 3;
 }
 .feed:hover{
   transform: scale(102%);
   cursor: pointer;
+  cursor: url(pinkstar.cur), auto;
   }
 .mail{
   position: absolute;    
       width: 14.11vw;
       margin-left: 80vw;
       margin-top: 7.92vw; 
+      z-index: 3;
   }
   /* .send{
     margin-left: 80vw;
@@ -63,6 +85,7 @@ position: absolute;
   .mail:hover{
     transform: scale(102%);
     cursor: pointer;
+    cursor: url(pinkstar.cur), auto;
     }
 
 .info{
@@ -70,11 +93,13 @@ position: absolute;
         width: 15vw;
         margin-left: 6vw;
         margin-top: 20vw; 
+        z-index: 3;
 }
 
 .info:hover{
   transform: scale(102%);
   cursor: pointer;
+  cursor: url(pinkstar.cur), auto;
   }
 
 /* .logo{
@@ -91,6 +116,7 @@ position: absolute;
     display: flex;
     position:absolute;
     background-color: #0E0D19;
+    z-index: 3;
 }
 .flow-text {
   font-family: 'galmuri';
@@ -103,6 +129,7 @@ position: absolute;
     font-weight:bold;
     color: #F7F7F5; */
     margin-top: 0.47vw;
+    z-index: 3;
     
 }
 /* .flow-text:hover {
@@ -111,6 +138,7 @@ position: absolute;
 .flow-text:hover .flow-wrap {
   animation-play-state: paused;
   cursor: pointer;
+  cursor: url(pinkstar.cur), auto;
 }
 .flow-wrap {
   animation: textLoop 25s linear infinite;
@@ -152,9 +180,11 @@ margin-left: 29vw;
 }
 
 .back{
-    width: 170vw;
-    height: 90vh;
-    justify-content : center;
+  width: 255vw;
+  height: 100vh;
+  display: flex;
+justify-content: center;
+align-items: center;
 }
 .flow-container{
   width: 100vw;
@@ -190,11 +220,11 @@ height: 4.23vw;
     
 }
 
-    .back{
-        width: 170vw;
-        height: 90vh;
-        justify-content : center;
-    }
+.back{
+  width: 210vw;
+  height: 100vh;
+  justify-content : center;
+}
     .flow-container{
       width: 100vw;
       height: 4.1vw;
