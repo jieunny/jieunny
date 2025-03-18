@@ -200,7 +200,7 @@ height: 4.23vw;
 }
 }
 
-@media (min-width:768px) and (max-width:1024px) {
+@media (min-width:768px) and (max-width:1366px) {
     
     .info{
         width: 27vw;
