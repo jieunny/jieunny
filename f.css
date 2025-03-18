@@ -1,55 +1,31 @@
-#qwer {
-    font-family: galmuri;
-    display: flex;
-    color: rgb(255, 84, 84);
-    font-size: 50px;  
-    
-}
+
 
 * {
     box-sizing: border-box;
     letter-spacing: -1px;
     vertical-align: middle;
-    font-family: 'galmuri';
     
 }
 
-/* styles.css{
-    * {
-        box-sizing: border-box;
-        letter-spacing: -1px;
-        vertical-align: middle;
-        font-family: 'Noto';
-    }
-} */
-
-/* @font-face {
-    font-family: 'galmuri';
-    src: url("Galmuri14.woff2");
-    src: url('https://cdn.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css');
+img {
+    margin: auto;
+    width: 13vw;
     
-} */
-
-@font-face {
-    font-family: galmuri;
+    display: flex;
+    justify-content : center;
     
-    src: url("./font/Galmuri14.ttf"); 
-    /* src: url('https://cdn.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css');
-     */
+    position: absolute;
 }
+.parents {
+    z-index: 4;
+    margin-bottom: 5px;
+    width: 58.2vw;
+    height: 14vw;
+    background:linear-gradient(#ffa5a5, #a3ff99);
+    align-items: center;
+display: flex;
+justify-content : center;
+flex-direction: column;
 
-
-@font-face {
-    font-family: 'lato';
-    src: url("Lato-BlackItalic.ttf");
-
-    
-}
-@font-face {
-    font-family: 'Spoqa Han Sans Neo';
-    font-weight: 700;
-    src: local('Spoqa Han Sans Neo Bold'),
-    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@latest/Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Bold.woff2') format('woff2'),
-    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@latest/Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Bold.woff') format('woff'),
-    url('https://cdn.jsdelivr.net/gh/spoqa/spoqa-han-sans@latest/Subset/SpoqaHanSansNeo/SpoqaHanSansNeo-Bold.ttf') format('truetype');
-}
+  }
+  

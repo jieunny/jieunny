@@ -49,7 +49,17 @@ position: absolute;
       margin-left: 80vw;
       margin-top: 7.92vw; 
   }
-  
+  /* .send{
+    margin-left: 80vw;
+      margin-top: 7.92vw; 
+    width: 12vw;
+    height: 12vw;
+    font-size: 1vw;
+    color: #ff0202;  
+    background-color: rgb(117, 255, 135);
+    z-index: 3;
+  }
+   */
   .mail:hover{
     transform: scale(102%);
     cursor: pointer;
