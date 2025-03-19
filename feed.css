@@ -8,7 +8,9 @@
     
 }
 body, html {cursor: url(pinkcursor.cur), auto;
-    overflow:hidden;}
+    overflow:hidden;
+    width: 100vw;
+    height: 100vh;}
 
 .con{
     
