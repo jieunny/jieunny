@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>home</title>
+    <link rel="stylesheet" type="text/css" href="egghome.css">
+</head>
+
+<script>
+ window.onload = function () {
+  const container = document.querySelector(".con");
+  const items = document.querySelectorAll(".item");
+  const textBox = document.getElementById("mainText");
+
+  let typingTimer = null;
+  let activeItem = null;
+
+  items.forEach(item => {
+    let startX, startY;
+    let startLeft, startTop;
+    let moved = false;
+
+    item.addEventListener("mousedown", e => {
+      e.preventDefault();
+      moved = false;
+      startX = e.clientX;
+      startY = e.clientY;
+
+      document.addEventListener("mousemove", move);
+      document.addEventListener("mouseup", stop);
+    });
+
+    function move(e) {
+      const dx = e.clientX - startX;
+      const dy = e.clientY - startY;
+
+      // 🔥 진짜 드래그 판정
+      if (!moved && (Math.abs(dx) > 3 || Math.abs(dy) > 3)) {
+        moved = true;
+
+        const rect = item.getBoundingClientRect();
+        const parent = container.getBoundingClientRect();
+
+        item.style.left = rect.left - parent.left + "px";
+        item.style.top  = rect.top  - parent.top  + "px";
+
+        startLeft = item.offsetLeft;
+        startTop  = item.offsetTop;
+      }
+
+      if (!moved) return;
+
+      item.style.left = startLeft + dx + "px";
+      item.style.top  = startTop  + dy + "px";
+    }
+
+    function stop() {
+      document.removeEventListener("mousemove", move);
+      document.removeEventListener("mouseup", stop);
+
+      if (!moved) return;
+
+      const cw = container.clientWidth;
+      const ch = container.clientHeight;
+
+      item.style.left = (item.offsetLeft / cw * 100) + "%";
+      item.style.top  = (item.offsetTop  / ch * 100) + "%";
+    }
+
+  }); // ✅ forEach 닫힘
+
+}; // ✅ window.onload 닫힘
+
+</script>
+
+
+<body>
+<div class="con">
+ <a href="mailto:wldms0257@naver.com" ><img src="mail2x.png" class="mail"></a> 
+
+<!-- <img src="pngegg.png"
+     class="item item-a"
+     data-link="스담.html"
+     >
+
+<img src="gecko.png"
+     class="item item-b"
+     data-link="케이크2.html"
+     >
+
+<img src="Emotionless Kiss Emoji.png"
+     class="item item-c"
+     data-link="케이크3.html"
+     > -->
+
+<img src="mainegg3.png" class="back">
+<div class="bt">
+<div class="eggbt1" onclick="location.href= 'eggfeed.html'"><div class="t1">feed</div></div>
+<div class="eggbt2" onclick="location.href= 'aboutme.html'"><div class="t2">about me</div></div>
+<div class="eggbt3" onclick="location.href= 'egghome.html'"></div>
+</div>
+     <!-- <div class="con2">
+     </div> -->
+</div>
+<div class="flow-container">
+  <div class="flow-text">
+    <img src="hi.png" class="flow-wrap">
+    <img src="hi.png" class="flow-wrap">
+    <img src="hi.png" class="flow-wrap">
+    <img src="hi.png" class="flow-wrap">
+    <img src="hi.png" class="flow-wrap">
+    <img src="hi.png" class="flow-wrap">
+    <img src="hi.png" class="flow-wrap">
+  </div>
+</div>
+</body>
+</html>
+

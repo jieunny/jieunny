@@ -1,0 +1,115 @@
+<!DOCTYPE html>  <!-- HTML5 문서임을 알려줌 -->
+<html>
+<head>
+    <meta charset="utf-8">  <!-- 한글이 정상적으로 보이도록 설정 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">  <!-- 모바일에서 콘텐츠 크기 최적화 -->
+    <title>feed</title>
+    <link rel="stylesheet" type="text/css" href="eggfeed.css">
+</head>
+<script>
+ window.onload = function () {
+  const container = document.querySelector(".con");
+  const items = document.querySelectorAll(".item");
+  const textBox = document.getElementById("mainText");
+
+  let typingTimer = null;
+  let activeItem = null;
+
+  items.forEach(item => {
+    let startX, startY;
+    let startLeft, startTop;
+    let moved = false;
+
+    item.addEventListener("mousedown", e => {
+      e.preventDefault();
+      moved = false;
+      startX = e.clientX;
+      startY = e.clientY;
+
+      document.addEventListener("mousemove", move);
+      document.addEventListener("mouseup", stop);
+    });
+
+    function move(e) {
+      const dx = e.clientX - startX;
+      const dy = e.clientY - startY;
+
+      // 🔥 진짜 드래그 판정
+      if (!moved && (Math.abs(dx) > 3 || Math.abs(dy) > 3)) {
+        moved = true;
+
+        const rect = item.getBoundingClientRect();
+        const parent = container.getBoundingClientRect();
+
+        item.style.left = rect.left - parent.left + "px";
+        item.style.top  = rect.top  - parent.top  + "px";
+
+        startLeft = item.offsetLeft;
+        startTop  = item.offsetTop;
+      }
+
+      if (!moved) return;
+
+      item.style.left = startLeft + dx + "px";
+      item.style.top  = startTop  + dy + "px";
+    }
+
+    function stop() {
+      document.removeEventListener("mousemove", move);
+      document.removeEventListener("mouseup", stop);
+
+      if (!moved) return;
+
+      const cw = container.clientWidth;
+      const ch = container.clientHeight;
+
+      item.style.left = (item.offsetLeft / cw * 100) + "%";
+      item.style.top  = (item.offsetTop  / ch * 100) + "%";
+    }
+
+  }); // ✅ forEach 닫힘
+
+}; // ✅ window.onload 닫힘
+
+</script>
+<body>
+    <p style="font-family: 'Galmuri14';"></p>
+    <div class="con">
+    <img src="geckoy.png" class="item item-c">
+<img src="chick.png" class="item item-d">
+<img src="turtle.png" class="item item-e">
+        <div class="egg-board">
+    <img src="eggcase9.png" class="back">
+
+    <img src="wegg.png" class="egg egg1">
+    <!-- <img src="wegg.png" class="egg egg2"> -->
+    <img src="yegg.png" class="egg egg3" onclick="location.href= '이야기케이크.html'">
+    <img src="pegg.png" class="egg egg4" onclick="location.href= '파르미.html'">
+    <img src="begg.png" class="egg egg5" onclick="location.href= '스담.html'">
+    <!-- <img src="wegg.png" class="egg egg6"> -->
+    <img src="bkegg.png" class="egg egg7" onclick="location.href= 'egghome.html'">
+    <img src="gegg.png" class="egg egg8" onclick="location.href= '세라보.html'">
+    <img src="regg.png" class="egg egg9 " onclick="location.href= '카르텔.html'">
+  </div>
+    
+<div class="flow-container">
+  <div class="flow-text">
+    <img src="hi.png" class="flow-wrap">
+    <img src="hi.png" class="flow-wrap">
+    <img src="hi.png" class="flow-wrap">
+    <img src="hi.png" class="flow-wrap">
+    <img src="hi.png" class="flow-wrap">
+    <img src="hi.png" class="flow-wrap">
+    <img src="hi.png" class="flow-wrap">
+  </div>
+</div>
+        <!-- <div class="con2">
+            
+          </div> -->
+        </div>
+         
+    
+</body>
+<!-- <body style="background-color:#6887F4">
+  </body> -->
+</html>

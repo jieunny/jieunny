@@ -3,14 +3,14 @@
     border-collapse: collapse;
     text-decoration: none;
      margin: 0vw;
-    padding: 0vw;
-    
-    
+    padding: 0vw;  
 }
 body, html {cursor: url(pinkcursor.cur), auto;
     overflow:hidden;
     width: 100vw;
     height: 100vh;}
+
+
 
 .con{
     
@@ -22,7 +22,7 @@ body, html {cursor: url(pinkcursor.cur), auto;
   position:absolute;
   z-index: 2; 
   overflow:hidden;
-  
+ 
 }
 .con2{
     
@@ -57,7 +57,7 @@ body, html {cursor: url(pinkcursor.cur), auto;
     
     .back{
         width: 100vw;
-        height: 110vh;
+        height: 100vh;
         display: flex;
         
       justify-content : center;
@@ -90,15 +90,38 @@ overflow: hidden;
  .scrollbox{
     overflow: scroll;
     width: 58.2vw;
-    height: 38.6vw;
-    
+    height: 38.2vw;
+    overflow-x: hidden;
     z-index: 3; 
     display: flex;
     position: absolute;
     flex-direction : column;
-    margin-top: 3.6vw;
+    margin-top: 3.85vw;
+    margin-right: 0.3vw;
     text-align: center;
     }
+      .scrollbox::-webkit-scrollbar {
+    width: 1.2vw;
+    
+  }
+  .scrollbox::-webkit-scrollbar-thumb:hover {
+	background-color:#60a0ff;
+    cursor: url(greenstar.cur), auto;
+}
+
+  .scrollbox::-webkit-scrollbar-thumb {
+    background-color: #5a97f9d1;
+    border-radius: 10vw;
+    background-clip: padding-box;
+    border: 0.2vw solid transparent;
+    box-shadow: inset 0px 0px 0.5vw #7aacf7;
+  }
+  .scrollbox::-webkit-scrollbar-track {
+    background-color: rgba(128, 128, 128, 0.58);
+    border-radius: 10vw;
+    box-shadow: inset 0px 0px 0.5vw white;
+  }
+
 
   /*  img {
         margin: auto;

@@ -1,0 +1,341 @@
+@font-face {
+    font-family: 'doss';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/DOSSaemmul.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'com';
+    src: url('Ycomputer.ttf') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+*{
+    list-style: none;
+    border-collapse: collapse;
+    text-decoration: none;
+     margin: 0vw;
+    padding: 0vw;
+    
+}
+body, html {
+    font-family: 'doss';cursor: url(pinkcursor.cur), auto;
+    overflow:hidden;
+    width: 100%;
+    height: 100%;}
+.box{
+  position:absolute;
+  /* background-color: #cccc84; */
+  left: 3%;
+  width: 30vmin;
+  height: 60vmin;
+  /* aspect-ratio: 1 / 2; */
+  display: flex;
+   z-index: 50; 
+     align-items: center;  
+   justify-content : center;
+}
+/* .item-a {position:absolute;  top: 0%; width: 18vmin; }
+.item-b {position:absolute; top:33%; width: 17vmin; }
+.item-c {position:absolute; bottom: 0; width: 18vmin; } */
+
+
+  .item {
+  
+  position: absolute;
+ 
+ z-index: 3; 
+  touch-action: none;
+  user-select: none;
+
+  animation: nod 0.9s steps(2, end) infinite;
+  transform-origin: center center;
+
+  transition: transform 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.item-a {
+  left: 7vmin;
+  bottom: 45vmin;
+  width: 18vmin;
+  animation-duration: 1.15s;
+  animation-delay: -0.2s;
+}
+
+.item-b {
+  left: 3vmin;
+  bottom: 24vmin;
+  width: 17vmin;
+   animation-duration: 0.9s;
+  animation-delay: -0.6s;
+}
+
+.item-c {
+  left: 14vmin;
+  bottom: 7vmin;
+  width: 18vmin;
+  animation-duration: 1.5s;
+  animation-delay: -1s;
+}
+
+
+.item:hover {
+  cursor: url(greenstar.cur), auto;
+/* 
+ animation: none; */
+ transform: rotate(0deg) scale(1.05);
+}
+
+.con{
+      position: relative;
+    width: 100vw;
+    height: 100vh;
+  background-color: #f7f7f5;  
+    display: flex;
+  justify-content : center;
+  align-items: center;
+  
+  z-index: 2; 
+  overflow:hidden;
+  touch-action: none;
+
+}  
+.text{  
+     position: absolute;
+  /* top: 49%; */
+  font-family: 'doss';
+  font-size: 2.8vmin;
+  line-height: 1.3;
+  z-index: 5;
+color: rgb(255, 255, 255);
+white-space: pre-line;
+width: 42vmin;
+
+}
+.text span {
+  display: block;
+  opacity: 0;
+  transform: translateY(6px);
+  animation: fadeUp 0.35s ease forwards;
+}
+.text.left {
+  text-align: left;
+}
+
+.text.center {
+  text-align: center;
+}
+
+.text.right {
+  text-align: right;
+}
+/* 🔴 클릭 후 상태: 왼쪽 */
+.text.left {
+  text-align: left;
+}
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.oval {
+   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60vmin;
+  height: 80vmin;
+  background-color: #51acf7;
+  display: flex;
+  justify-content : center;
+  align-items: center;
+  z-index: 1; 
+  /* 위는 둥글고 아래는 조금 납작 */
+  border-radius: 50% 50% 45% 45% / 60% 60% 40% 40%;
+  transition: background-color;
+}
+.back {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 141vmin;   /* 크기는 여기서 조절 */
+  height: 141vmin;
+z-index: 2;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.btnw {
+  position: absolute;  
+    
+      width: 20vmin;
+      /* height: 11vmin; */
+     aspect-ratio: 2 / 1;
+  right: 2%;
+    bottom: 3%;
+
+}
+
+.btn {
+  display: flex;
+  justify-content : center;
+  
+  position: absolute;
+  width: 100%;
+    top: 0;
+  left: 0;
+  
+}
+
+/* 기본 상태 */
+.btn2 {
+  opacity: 0;
+  
+}
+
+/* 마우스 오버 */
+.btnw:hover .btn1 {
+  opacity: 0;
+}
+
+.btnw:hover .btn2 {
+    cursor: url(pinkstar.cur), auto;
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+.btnw {
+  width: 35vmin;
+      /* height: 16vmin; */
+  right: 4.5%;
+    bottom: 3.5%;
+  /* background-color: blueviolet; */
+}
+.back{
+top: 43%;  
+width: 160vmin;   /* 크기는 여기서 조절 */
+  height: 160vmin;
+}
+.oval {
+  width: 64vmin;
+  height: 84vmin;
+  top: 43%;
+}
+  .box{
+    top: 70vmin;
+    left: 3.5%;
+    transform: translateY(-50%);
+    /* background-color: #51acf7; */
+    width: 65vmin;      /* 가로로 길게 */
+    height: 20vmin;     /* 세로는 줄이고 */
+    
+    flex-direction: row;     /* 🔥 가로 배치 */
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  /* 세로 위치 제거 */
+  /* .item-a,
+  .item-b,
+  .item-c{
+    position: relative;
+
+  }
+  .item-a { 
+top:auto;
+    width: 19vmin; }
+.item-b { 
+top: 42%;
+  width: 18vmin; }
+.item-c {
+top: 60%;
+  width: 19vmin; }  */
+.item-a {
+  left: 3vmin;
+  bottom: 58vmin;
+width: 20vmin;
+
+}
+
+.item-b {
+  left: 26vmin;
+  bottom: 45vmin;
+width: 19vmin;
+
+}
+
+.item-c {
+  left: 49vmin;
+  bottom: 47vmin;
+width: 20vmin;
+
+}
+}
+@media (min-width:768px) and (max-width:1023px) {
+ .btnw {
+width: 23vmin;
+  right: 2.5%;
+  
+}
+.back{
+top: 43%;  
+width: 145vmin;   /* 크기는 여기서 조절 */
+  height: 145vmin;
+}
+.oval {
+  top: 43%;
+}
+  .box{
+    bottom: 4.5%;
+    left: 3%;
+    transform: translateY(-50%);
+    /* background-color: #51acf7; */
+    width: 57vmin;      /* 가로로 길게 */
+    height: 20vmin;     /* 세로는 줄이고 */
+    
+    flex-direction: row;     /* 🔥 가로 배치 */
+    justify-content: space-around;
+    align-items: center;
+  }
+.item-a {
+  left: 2vmin;
+  bottom: 20vmin;
+
+width: 18vmin;
+}
+
+.item-b {
+  left: 22vmin;
+  bottom: 6vmin;
+width: 17vmin;
+
+}
+
+.item-c {
+  left: 43vmin;
+  bottom: 8vmin;
+width: 18vmin;
+
+}
+
+  /* 세로 위치 제거 */
+  /* .item-a,
+  .item-b,
+  .item-c{
+    position: relative;
+
+  } */
+  /* .item-a { 
+top:auto;
+    width: 16vmin; }
+.item-b { 
+top: 42%;
+  width: 15vmin; }
+.item-c {
+top: 63%;
+  width: 16vmin; }  */
+}

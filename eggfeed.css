@@ -1,0 +1,325 @@
+*{
+    list-style: none;
+    border-collapse: collapse;
+    text-decoration: none;
+     margin: 0vw;
+    padding: 0vw;
+    
+}
+
+
+body, html {cursor: url(pinkcursor.cur), auto;
+    overflow:hidden;
+    width: 100%;
+    height: 100%;}
+
+@font-face {
+    font-family: 'galmuri';
+    src: url("Galmuri14.ttf");
+    src: url('https://cdn.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css');
+    
+}
+@import url('https://cdn.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css');
+
+/* .back {
+  width: 60%;
+  position: absolute;
+  top: 13%;
+ z-index: 10; 
+  left: 50%;
+  transform: translateX(-50%); 
+  pointer-events: none; 
+} */
+.back {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 100vmin;   /* 크기는 여기서 조절 */
+  height: 100vmin;
+
+  object-fit: contain;
+  z-index: 1;
+  pointer-events: none;
+}
+  
+/* .egg{
+  position: absolute;
+  object-fit: contain;
+  width: 25vmin;
+  z-index: 2;
+} */
+ 
+.egg {
+  
+  position: absolute;
+  width: 33%;          /* 판 대비 크기 */
+  aspect-ratio: 1 1.3;
+  z-index: 2;
+}
+
+.egg1 { left: 2%; top: -7%; transform: rotate(-2deg);}
+.egg2 { left: 34%; top: -7%; }
+.egg3 { left: 65%; top: -7%; }
+
+.egg4 { left: 2%; top: 25%; 
+transform: rotate(4deg);}
+.egg5 { left: 34%; top: 25%;transform: rotate(-7deg); }
+.egg6 { left: 65%; top: 25%; }
+
+/* 아래 줄 */
+.egg7 { left: 2%; top: 57%; 
+}
+.egg8 { left: 34%; top: 57%; }
+.egg9 { left: 65%; top: 57%; 
+transform: rotate(7deg);}
+
+ .egg:hover{
+  transform: scale(102%);
+  cursor: pointer;
+  cursor: url(pinkstar.cur), auto;
+  } 
+
+.egg-board {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 63vmin;        /* 화면 줄어들면 같이 줄어듦 */
+  aspect-ratio: 3 / 3;  /* 계란판 비율 */
+  transform: translate(-50%, -50%);
+  /* background-color: blue; */
+}
+
+.item-c {
+  right: 6.5vmin;
+  bottom: 28vmin;
+  width: 16vmin;
+  animation-duration: 1.15s;
+  animation-delay: -0.2s;
+}
+
+.item-d {
+  right: 3vmin;
+  bottom: 15vmin;
+  width: 14vmin;
+   animation-duration: 0.9s;
+  animation-delay: -0.6s;
+}
+
+.item-e {
+  right: 13vmin;
+  bottom: 5vmin;
+  width: 14vmin;
+  animation-duration: 1.5s;
+  animation-delay: -1s;
+}
+  .item {
+  
+  position: absolute;
+ 
+ z-index: 3; 
+  touch-action: none;
+  user-select: none;
+
+  animation: nod 0.9s steps(2, end) infinite;
+  transform-origin: center center;
+
+  transition: transform 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.item:hover {
+  cursor: url(greenstar.cur), auto;
+
+ animation: none;
+ transform: rotate(0deg) scale(1.05);
+}
+.item.dragging {
+  animation: none;
+  transform: rotate(0deg) scale(1.08);
+}
+
+@keyframes nod {
+    0%   { transform: rotate(-1.5deg); }
+    50%  { transform: rotate(1deg); }
+    100% { transform: rotate(-1.5deg); }
+}
+
+.con{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+  background-color: #f7f7f5;
+  position:relative;
+  z-index: 2; 
+  overflow:hidden;
+  
+}
+/* .con2{
+    
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+justify-content : center;
+align-items: center;
+
+z-index: 1; 
+overflow:hidden;
+
+} */
+
+.feed{
+position: absolute;    
+    width: 28vw;
+     left: 70%;
+  top: 65%;
+    z-index: 3;
+}
+.feed:hover{
+  transform: scale(102%);
+  cursor: pointer;
+  cursor: url(pinkstar.cur), auto;
+  }
+.mail{
+  position: absolute;    
+      width: 14.11vw;
+      margin-left: 80vw;
+      margin-top: 7.92vw; 
+      z-index: 3;
+  }
+  /* .send{
+    margin-left: 80vw;
+      margin-top: 7.92vw; 
+    width: 12vw;
+    height: 12vw;
+    font-size: 1vw;
+    color: #ff0202;  
+    background-color: rgb(117, 255, 135);
+    z-index: 3;
+  }
+   */
+  .mail:hover{
+    transform: scale(102%);
+    cursor: pointer;
+    cursor: url(pinkstar.cur), auto;
+    }
+
+.info{
+    position: absolute;    
+        width: 15vw;
+        margin-left: 6vw;
+        margin-top: 20vw; 
+        z-index: 3;
+}
+
+.info:hover{
+  transform: scale(102%);
+  cursor: pointer;
+  cursor: url(pinkstar.cur), auto;
+  }
+
+
+
+
+@media (max-width: 768px) {
+
+ .flow-container {
+    height: 23px;
+  }
+
+  .flow-wrap {
+    height: 14px;
+  }
+.back {
+  width: 110vmin;   /* 크기는 여기서 조절 */
+  height: 110vmin;
+
+}
+.egg-board{
+  width: 69.5vmin;
+}  
+  /* .flow-text {
+    gap: 5vw;
+  } */
+
+  .item-c { right: 4vmin; bottom:29.5vmin; width: 18vmin;
+}
+.item-d { right: 2vmin; bottom: 15.5vmin; width: 16vmin;
+}
+.item-e { right: 13vmin; bottom:6vmin; width: 16vmin;
+}
+}
+@media (min-width:768px) and (max-width:1024px) {
+ .back {
+  width: 90vmin;   /* 크기는 여기서 조절 */
+  height: 90vmin;
+
+} 
+.egg-board{
+  width: 58vmin;
+} 
+.item-c { right: 3vmin; bottom:24vmin; width: 15vmin;
+}
+.item-d { right: 1.5vmin; bottom: 11vmin; width: 13vmin;
+}
+.item-e { right: 12vmin; bottom:4vmin; width: 13vmin;
+}
+  .flow-container {
+    height: 29px;
+  }
+
+  .flow-wrap {
+    height: 20px;
+  }
+}
+.flow-container {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 32px;          /* ⭐ PC는 고정 */
+  background-color: #0E0D19;
+  overflow: hidden;
+  z-index: 5;
+   display: flex;
+  align-items: center; 
+}
+.flow-text {
+  
+    display: flex;
+    flex: 0 0 auto;
+    white-space: nowrap;
+    
+    transition: 0s;
+  
+    z-index: 3;
+    
+}
+
+.flow-text:hover .flow-wrap {
+  animation-play-state: paused;
+  cursor: pointer;
+  cursor: url(pinkstar.cur), auto;
+}
+.flow-wrap {
+height: 18px;
+  width: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+  animation: textLoop 25s linear infinite;
+  padding-right: 2px;
+
+} 
+
+@keyframes textLoop {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+
+
+}

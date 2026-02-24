@@ -1,0 +1,92 @@
+<!DOCTYPE html>  <!-- HTML5 문서임을 알려줌 -->
+<html>
+<head>
+    <meta charset="utf-8">  <!-- 한글이 정상적으로 보이도록 설정 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">  <!-- 모바일에서 콘텐츠 크기 최적화 -->
+    <title>aboutme</title>
+    <link rel="stylesheet" type="text/css" href="aboutme.css">
+</head>
+<script>
+window.onload = function () {
+    const container = document.querySelector(".con");
+    const imgs = document.querySelectorAll(".item");
+
+    imgs.forEach(img => {
+        let startX = 0, startY = 0;
+        
+        let startLeft = 0, startTop = 0;
+        // let isDragging = false;
+        let moved = false;
+
+        img.addEventListener("mousedown", e => {
+            e.preventDefault();
+            isDragging = false;
+
+            // 🔥 여기 핵심: % → px로 고정
+            const rect = img.getBoundingClientRect();
+            const parentRect = container.getBoundingClientRect();
+
+            img.style.left = (rect.left - parentRect.left) + "px";
+            img.style.top  = (rect.top  - parentRect.top)  + "px";
+
+            startX = e.clientX;
+            startY = e.clientY;
+
+            startLeft = img.offsetLeft;
+            startTop  = img.offsetTop;
+
+            document.addEventListener("mousemove", move);
+            document.addEventListener("mouseup", stop);
+        });
+
+        function move(e) {
+            const dx = e.clientX - startX;
+    const dy = e.clientY - startY;
+
+    if (Math.abs(dx) > 3 || Math.abs(dy) > 3) {
+        moved = true;
+    }
+
+    if (!moved) return;
+
+    img.style.left = startLeft + dx + "px";
+    img.style.top  = startTop  + dy + "px";
+}
+
+        function stop() {
+            document.removeEventListener("mousemove", move);
+            document.removeEventListener("mouseup", stop);
+
+                if (!moved) return; // 🔥 클릭이면 위치 안 바꿈
+            // 다시 %로 변환 (반응형 유지)
+            const cw = container.clientWidth;
+            const ch = container.clientHeight;
+
+            img.style.left = (img.offsetLeft / cw * 100) + "%";
+            img.style.top  = (img.offsetTop  / ch * 100) + "%";
+        }
+
+        // img.addEventListener("click", e => {
+        //     if (isDragging) {
+        //         e.preventDefault();
+        //         return;
+        //     }
+        //     location.href = img.dataset.link;
+        // });
+    });
+};
+</script>
+
+<body>
+<div class="con">    
+  <div class="text">ABCDEFG 한글 테스트</div>
+<img src="duck.png" class="item item-a">
+
+<img src="gecko.png"
+     class="item item-b">
+
+<img src="wegg.png"
+     class="item item-c">
+    </div>
+</body>
+</html>

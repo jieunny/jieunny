@@ -1,0 +1,360 @@
+@font-face {
+  font-family: doss;
+  src: url('exqt.ttf') format('truetype');
+  font-weight: 700;
+}
+/* @import url('https://cdn.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css'); */
+*{
+    list-style: none;
+    border-collapse: collapse;
+    text-decoration: none;
+     margin: 0vw;
+    padding: 0vw;  
+}
+
+body, html {cursor: url(pinkcursor.cur), auto;
+    overflow:hidden;
+    width: 100%;
+    height: 100%; 
+     font-family: 'doss', monospace;
+  font-size: 22px;
+  -webkit-font-smoothing: none;
+  font-smooth: never;
+   }
+
+
+.con{
+      position: relative;
+    width: 100vw;
+    height: 100vh;
+  background-color: #f7f7f5;  
+    display: flex;
+  justify-content : center;
+  align-items: center;
+  
+  z-index: 2; 
+  overflow:hidden;
+  touch-action: none;
+ 
+}  
+
+.bt {
+  position: absolute;
+  top: 46%;
+  left: 50%;
+  width: 73vmin;        /* 화면 줄어들면 같이 줄어듦 */
+  height: 26vmin;
+  /* aspect-ratio: 1 / 0.4;  */
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content : center;
+  align-items: center;
+  /* background-color: rgba(67, 67, 67, 0.18); */
+  z-index: 10;
+}
+.eggbt1 {
+  position: absolute;
+  left: 0%;
+  border-radius: 25%;
+  width: 32%;        
+  height: 100%;
+  color: transparent;
+   font-size: 2.5vmin;
+    font-family: 'doss';
+    display: flex;
+    /* align-items: center;   */
+    justify-content : center;
+  /* transform:translate(-105%,-58%); */
+  /* background-color: rgba(0, 183, 255, 0.47); */
+  
+}
+.eggbt2 {
+  position: absolute;
+  border-radius: 25%;
+  width: 32%;  
+  height: 100%;  
+  left: 34%;  
+  color: transparent;
+    font-size:2.5vmin;
+    font-family: 'doss';
+    display: flex;
+    
+    /* align-items: center;   */
+    justify-content : center;
+ /* transform:translate(2%,-58%); */
+  /* background-color: rgba(81, 255, 0, 0.45); */
+}
+.eggbt3 {
+  position: absolute;
+ border-radius: 25%;
+  width: 32%;    
+ height: 100%;
+ /* transform:translate(110%,-58%); */
+  right: 0%;
+  /* background-color: rgba(0, 0, 255, 0.345); */
+}
+.eggbt1,.eggbt2, .eggbt3:hover{
+  cursor: url(pinkstar.cur), auto;
+  } 
+  .eggbt1:hover{
+ 
+    color: #ff3db8;
+  } 
+  .t1{
+    margin-top: 5vmin;
+    /* background-color: #ff873d; */
+  }
+   .t2{
+    margin-top: 10.5vmin;
+    /* background-color: #ff873d; */
+  }
+  
+  .eggbt2:hover{
+
+    color: #ffffff;
+    
+  } 
+  /* .eggbt3:hover{
+ 
+  }  */
+
+
+/* .back {
+  width: 55%;
+  position: absolute;
+  top: 15%;
+ z-index: 10; 
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none; 
+} */
+.back {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 80vmin;   /* 크기는 여기서 조절 */
+  height: 80vmin;
+
+  object-fit: contain;
+  z-index: 3;
+  pointer-events: none;
+}
+/*
+
+.item-c { right: 6vmin; bottom:32vmin; width: 18vmin;
+animation-delay: 0s;}
+.item-d { right: 3vmin; bottom: 16vmin; width: 16.5vmin;
+animation-delay: -0.4s;}
+.item-e { right: 13vmin; bottom:6vmin; width: 16vmin;
+animation-delay: -0.2s;}*/
+
+.item-c { right: 6vmin; top:32vmin; width: 18vmin;
+/* animation-duration: 1.3s; */
+animation-delay: 0s;}
+.item-d { right: 3vmin; top: 16vmin; width: 16.5vmin;
+/* animation-duration: 0.8s; */
+animation-delay: -0.4s;}
+.item-e { right: 13vmin; top:6vmin; width: 16vmin;
+/* animation-duration: 1.1s; */
+animation-delay: -0.2s;}
+
+  .item {
+  
+  position: absolute;
+ 
+ z-index: 3; 
+  touch-action: none;
+  user-select: none;
+
+  animation: nod 0.9s steps(2, end) infinite;
+  transform-origin: center center;
+
+  transition: transform 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.item:hover {
+  cursor: url(greenstar.cur), auto;
+
+ animation: none;
+ transform: rotate(0deg) scale(1.05);
+}
+.item.dragging {
+  animation: none;
+  transform: rotate(0deg) scale(1.08);
+}
+
+@keyframes nod {
+    0%   { transform: rotate(-1.5deg); }
+    50%  { transform: rotate(1deg); }
+    100% { transform: rotate(-1.5deg); }
+}
+
+.mail{
+  position: absolute;    
+      width: 14vmin;
+    left: 2%;
+    bottom: 3%;
+      z-index: 3;
+      
+      transition:opacity 0.25s ease, transform 0.25s cubic-bezier(0.25,0.8,0.25,1);
+  }
+
+  .mail:hover{
+    transform: scale(107%)  rotate(-3deg); 
+    
+
+    cursor: pointer;
+    cursor: url(pinkstar.cur), auto;
+    }
+@media (max-width: 768px) {
+    /* .t1{
+    margin-top: 7vmin;
+color: #ff3db8;
+  }
+   .t2{color: #ffffff;
+margin-top: 13vmin;
+  } */
+  .eggbt1,.eggbt2 {font-size: 3vmin;}
+    .eggbt1:hover{
+ 
+    color: #ff3db8;
+  } 
+
+  .eggbt2:hover{
+
+    color: #ffffff;
+    
+  } 
+  .item {
+      width: 24vmin;
+
+    }
+  
+  .back{
+      width: 85vmin;
+  
+  }
+ .flow-container {
+    height: 23px;
+  }
+
+  .flow-wrap {
+    height: 14px;
+  }
+.mail{
+ 
+      width: 19vmin;
+  left: 4%;
+    bottom: 3%;
+   
+  }
+  .bt {
+  top: 47%;
+  height: 27vmin;
+  width: 77vmin;
+    /* left: 50.5%; */
+    /* width: 77vmin; */
+  /* background-color: rgba(255, 235, 153, 0.406); */
+}
+
+  }
+  
+  @media (min-width:768px) and (max-width:1024px) {
+    /* .t1{
+   margin-top: 5.5vmin; 
+color: #ff3db8;
+  }
+   .t2{color: #ffffff;
+margin-top: 9.5vmin; 
+  } */
+  .eggbt1,.eggbt2 {font-size: 2.5vmin;}
+     .item {
+      width: 20vmin;
+
+    }
+      .back{
+          width: 75vmin;
+      }
+      
+   .bt {
+    width: 69vmin;
+   
+  height: 23vmin; 
+  /* background-color: rgba(255, 182, 127, 0.37); */
+}
+ .item-c { /*right: 6vmin; bottom:32vmin;  */
+  width: 16vmin;
+}
+ .item-d { /*right: 3vmin; bottom: 16vmin; */ width: 14.5vmin;
+}
+.item-e { /*right: 13vmin; bottom:6vmin;*/ width: 14vmin;
+}
+.mail{
+ 
+      width: 15vmin;
+  left: 3%;
+      /* bottom: 3%; */
+   
+  }
+  .flow-container {
+    height: 29px;
+  }
+
+  .flow-wrap {
+    height: 20px;
+  }
+  }
+  
+  .flow-container {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 32px;          /* ⭐ PC는 고정 */
+  background-color: #0E0D19;
+  overflow: hidden;
+  z-index: 5;
+   display: flex;
+  align-items: center; 
+}
+.flow-text {
+  
+    display: flex;
+    flex: 0 0 auto;
+    white-space: nowrap;
+    
+    transition: 0s;
+  
+    z-index: 3;
+    
+}
+
+.flow-text:hover .flow-wrap {
+  animation-play-state: paused;
+  cursor: pointer;
+  cursor: url(pinkstar.cur), auto;
+}
+.flow-wrap {
+height: 18px;
+  width: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+  animation: textLoop 25s linear infinite;
+  padding-right: 2px;
+
+} 
+
+@keyframes textLoop {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+
+
+}
