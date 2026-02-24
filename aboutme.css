@@ -216,7 +216,7 @@ z-index: 2;
   /* background-color: blueviolet; */
 }
 .back{
-top: 43%;  
+top: 42%;  
 width: 160vmin;   /* 크기는 여기서 조절 */
   height: 160vmin;
 }
@@ -262,14 +262,14 @@ width: 20vmin;
 }
 
 .item-b {
-  left: 26vmin;
+  left: 25.5vmin;
   bottom: 33vmin;
 width: 19vmin;
 
 }
 
 .item-c {
-  left: 49vmin;
+  left: 48.5vmin;
   bottom: 34.5vmin;
 width: 20vmin;
 
