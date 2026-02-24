@@ -212,7 +212,7 @@ z-index: 2;
   width: 35vmin;
       /* height: 16vmin; */
   right: 4.5%;
-    bottom: 3.5%;
+    bottom: 4%;
   /* background-color: blueviolet; */
 }
 .back{
@@ -256,22 +256,28 @@ top: 60%;
   width: 19vmin; }  */
 .item-a {
   left: 3vmin;
-  bottom: 58vmin;
+  bottom: 45vmin;
 width: 20vmin;
 
 }
 
 .item-b {
   left: 26vmin;
-  bottom: 45vmin;
+  bottom: 32vmin;
 width: 19vmin;
 
 }
 
 .item-c {
   left: 49vmin;
-  bottom: 47vmin;
+  bottom: 34-vmin;
 width: 20vmin;
+
+}
+.text{  
+
+  font-size: 3vmin;
+
 
 }
 }
