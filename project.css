@@ -40,9 +40,19 @@ bottom: 2.5vw;    /* 하단에서 20px 위 */
 .btn:hover{
  transform:rotate(-5deg); 
 }
+.video-small {
+    width: 50%;
+}
+.caption {
+    width: 80%;
+    margin: 8px auto 20px auto;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+}
 @media (max-width: 1024px) {
 
-  img, video {
+  img, video, video-small {
    
     width: 95%;
    
